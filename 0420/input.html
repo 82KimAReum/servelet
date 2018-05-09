@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>열차 좌석 예매 페이지</h1>
+    <hr/>
+    <form method="POST" action="/0420/servlet/InputServlet">
+    <table>
+        <tr>
+            <td>열차 좌석 코드:</td><td><input type="text" name="seatcode"></td>
+        </tr>
+        <tr>
+            <td>장소 코드:</td><td><input type="text" name="place"></td>
+        </tr>
+        <tr>
+            <td>주민등록번호:</td><td><input type="text" name="ipin1"> - <input type="text" name="ipin2"></td>
+        </tr>
+        <tr>
+            <td>할증코드:</td><td><input type="text" name="persent"></td>
+        </tr>
+        
+    </table>
+    <input type="submit" value="예약하기">
+    <input type="reset" value="취소하기">
+</form>
+</body>
+</html>

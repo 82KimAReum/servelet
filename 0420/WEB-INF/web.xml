@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="false">
+
+  	<display-name>Welcome to 0420</display-name>
+
+	<context-param>
+		<param-name>DBDRIVER</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	
+	<!-- <servlet>
+		<servlet-name>MyContext</servlet-name>
+		<servlet-class>ServletContextDemo1Servlet</servlet-class>
+		<init-param>
+			<param-name>DBURL</param-name>
+			<param-value>jdbc:mysql://192.168.56.2:3306/world</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyContext</servlet-name>
+		<url-pattern>/servlet/ServletContextDemo1</url-pattern>
+	</servlet-mapping> -->
+</web-app>
