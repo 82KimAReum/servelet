@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원 가입</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $('#userid').blur(function(){
+                $.ajax({
+                    url:"/0417/servlet/RequestDemo1?userid=" +$('#userid').val(),
+                    method:"GET",
+                    data:
+                        $('#userid').val(),                   
+                  
+                    success: function(data){
+                        //alert(data);  
+                            $('#result').text(data);              
+                    },
+                    error:function(){
+                        //alert("error");
+                        
+                    }
+                });
+            });
+            $('form').submit(function(){
+                if($('#username').val()==""){
+                    alert("이름을 넣어주세요");
+                    $('#username').focus();
+                    return false;
+                    //submit방지
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>회원가입!!</h1>
+    <form action="/0417/servlet/Register" method="POST">
+        <ul>
+        <li>ID: <input type ="text" name="userid" id="userid"><span id="result"></span></li>
+        <li>Name: <input type="text" name="username" id='username'></li>
+       <li> Hiredate: <input type="date" name="hiredate"></li>
+       <li> Salary:   <input type="number"name="salary"></li>
+        <li>Hobby: 
+             <input type="checkbox" name="hobby" value="낚시" >낚시&nbsp;  
+             <input type="checkbox" name="hobby" value="등산" >등산&nbsp;  
+             <input type="checkbox" name="hobby" value="바둑" >바둑&nbsp;  
+             <input type="checkbox" name="hobby" value="게임" >게임&nbsp;  
+             <input type="checkbox" name="hobby" value="영화감상" >영화감상&nbsp;  
+
+        
+        </li>
+        <li>Gender:   
+            <input type="radio" name="gender" value="남성">남성&nbsp;  
+            <input type="radio" name="gender" value="여성">여성&nbsp;  
+        </li>
+       <li> Favorite Season:    
+           <select name="season">
+               <option>--선택--</option>
+               <option value="봄">Spring</option>
+               <option value="여름">Summer</option>
+               <option value="가을">fall</option>
+               <option value="겨울">Winter</option>
+
+           </select>
+        </li>
+    </ul> 
+    <input type="submit"value="회원가입">
+    </form>
+</body>
+</html>
