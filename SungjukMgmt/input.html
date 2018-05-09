@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>성적 입력 창</title>
+</head>
+<body>
+    <h1>성적 입력 창</h1>
+    <form method="POST" action="/SungjukMgmt/servlet/Input">
+    <ul>
+        <li>학번: <input type="text" name="hakbun"/></li>
+        <li>이름: <input type="text" name="irum"/></li>
+        <li>국어: <input type="number" name="kor"/></li>
+        <li>영어: <input type="number" name="eng"/></li>
+        <li>수학: <input type="number" name="mat"/></li>        
+        <li>전산: <input type="number" name="edp"/></li>
+
+    </ul>
+    <input type="submit" value="입력하기"/>
+    </form>
+</body>
+</html>
